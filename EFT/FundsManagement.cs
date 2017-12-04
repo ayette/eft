@@ -91,6 +91,7 @@ namespace EFT
         {
             AddStudent add = new AddStudent();
             add.ShowDialog();
+            RefreshGrid();
         }
 
         private void tbAddFunds_Click(object sender, EventArgs e)

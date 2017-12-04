@@ -43,6 +43,7 @@
             this.btnMenu.Text = "Canteen";
             this.btnMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnFunds
             // 

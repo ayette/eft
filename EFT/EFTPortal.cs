@@ -25,5 +25,12 @@ namespace EFT
             sd.Show(); // Multiple window
             // sd.ShowDialog(); // Single Window window
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            Canteen c = new Canteen();
+
+            c.Show();
+        }
     }
 }
