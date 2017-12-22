@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace EFT
 {
-    public partial class Canteen : Form
+    public partial class MenuMain : Form
     {
-
-        List<OrderItem> items = new List<OrderItem>();
-        int count = 0;
-        public Canteen()
+        public MenuMain()
         {
             InitializeComponent();
-        }
-
-        private void btnPayment_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

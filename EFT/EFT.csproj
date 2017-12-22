@@ -72,14 +72,38 @@
     <Compile Include="Canteen.Designer.cs">
       <DependentUpon>Canteen.cs</DependentUpon>
     </Compile>
-    <Compile Include="EFTPortal.cs">
+    <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EFTPortal.Designer.cs">
-      <DependentUpon>EFTPortal.cs</DependentUpon>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditStudent.Designer.cs">
+      <DependentUpon>EditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent.Designer.cs">
+      <DependentUpon>MDIParent.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="MenuMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuMain.Designer.cs">
+      <DependentUpon>MenuMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,8 +124,20 @@
     <EmbeddedResource Include="Canteen.resx">
       <DependentUpon>Canteen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EFTPortal.resx">
-      <DependentUpon>EFTPortal.cs</DependentUpon>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditStudent.resx">
+      <DependentUpon>EditStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent.resx">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuMain.resx">
+      <DependentUpon>MenuMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -162,6 +198,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\coins %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier-machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-bag1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\budget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\budget %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

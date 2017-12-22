@@ -34,6 +34,10 @@ namespace EFT
                     numAmount.Value = 0;
                     studentId = 0;                    
                 }
+                else
+                {
+                    MessageBox.Show("Student not found.");
+                }
             }
 
             this.Close();

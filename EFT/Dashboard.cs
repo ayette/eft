@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EFT
 {
-    public partial class EFTPortal : Form
+    public partial class Dashboard : Form
     {
-        public EFTPortal()
+        public Dashboard()
         {
             InitializeComponent();
         }
@@ -20,17 +20,22 @@ namespace EFT
         private void btnFunds_Click(object sender, EventArgs e)
         {
             FundsManagement sd = new FundsManagement();
-
-            
-            sd.Show(); // Multiple window
-            // sd.ShowDialog(); // Single Window window
+            sd.MdiParent = this.MdiParent;
+            sd.Show(); 
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            Canteen c = new Canteen();
+            MenuMain canteen = new MenuMain();
+            canteen.MdiParent = this.MdiParent;
+            canteen.Show();
+        }
 
-            c.Show();
+        private void btnPOS_Click(object sender, EventArgs e)
+        {
+            Order order = new Order();
+            order.MdiParent = this.MdiParent;
+            order.Show();
         }
     }
 }

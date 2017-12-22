@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FundsManagement));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tbAdd = new System.Windows.Forms.ToolStripButton();
+            this.tbAddFunds = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,8 +41,6 @@
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Transactions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.tbAdd = new System.Windows.Forms.ToolStripButton();
-            this.tbAddFunds = new System.Windows.Forms.ToolStripButton();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -58,8 +58,30 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // tbAdd
+            // 
+            this.tbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbAdd.Image = global::EFT.Properties.Resources.users;
+            this.tbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbAdd.Name = "tbAdd";
+            this.tbAdd.Size = new System.Drawing.Size(23, 22);
+            this.tbAdd.Text = "Add Student";
+            this.tbAdd.Click += new System.EventHandler(this.tbAdd_Click);
+            // 
+            // tbAddFunds
+            // 
+            this.tbAddFunds.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbAddFunds.Image = global::EFT.Properties.Resources.coins__3_;
+            this.tbAddFunds.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbAddFunds.Name = "tbAddFunds";
+            this.tbAddFunds.Size = new System.Drawing.Size(23, 22);
+            this.tbAddFunds.Text = "Add Funds";
+            this.tbAddFunds.Click += new System.EventHandler(this.tbAddFunds_Click);
+            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -68,10 +90,11 @@
             this.FirstName,
             this.Amount,
             this.Transactions});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(859, 493);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(859, 496);
             this.dataGridView1.TabIndex = 1;
             // 
             // Id
@@ -118,26 +141,6 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "lesson.png");
             this.imageList1.Images.SetKeyName(1, "coins (1).png");
-            // 
-            // tbAdd
-            // 
-            this.tbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbAdd.Image = global::EFT.Properties.Resources.users;
-            this.tbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbAdd.Name = "tbAdd";
-            this.tbAdd.Size = new System.Drawing.Size(23, 22);
-            this.tbAdd.Text = "Add Student";
-            this.tbAdd.Click += new System.EventHandler(this.tbAdd_Click);
-            // 
-            // tbAddFunds
-            // 
-            this.tbAddFunds.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbAddFunds.Image = global::EFT.Properties.Resources.coins__3_;
-            this.tbAddFunds.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbAddFunds.Name = "tbAddFunds";
-            this.tbAddFunds.Size = new System.Drawing.Size(23, 22);
-            this.tbAddFunds.Text = "toolStripButton1";
-            this.tbAddFunds.Click += new System.EventHandler(this.tbAddFunds_Click);
             // 
             // bindingSource1
             // 
