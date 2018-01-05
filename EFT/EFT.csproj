@@ -60,6 +60,12 @@
     <Compile Include="AddFunds.Designer.cs">
       <DependentUpon>AddFunds.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMenu.Designer.cs">
+      <DependentUpon>AddMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <Compile Include="Transaction.cs" />
     <EmbeddedResource Include="AddFunds.resx">
       <DependentUpon>AddFunds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMenu.resx">
+      <DependentUpon>AddMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>

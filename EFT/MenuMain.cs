@@ -29,5 +29,12 @@ namespace EFT
         {
             RefreshGrid();
         }
+
+        private void tsbAddMenu_Click(object sender, EventArgs e)
+        {
+            AddMenu addMenu = new AddMenu();
+            addMenu.ShowDialog();
+            RefreshGrid();
+        }
     }
 }

@@ -90,6 +90,7 @@
             this.tsbAddMenu.Name = "tsbAddMenu";
             this.tsbAddMenu.Size = new System.Drawing.Size(23, 22);
             this.tsbAddMenu.Text = "Add Menu";
+            this.tsbAddMenu.Click += new System.EventHandler(this.tsbAddMenu_Click);
             // 
             // MenuMain
             // 
