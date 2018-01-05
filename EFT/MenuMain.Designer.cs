@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuMain));
             this.dgMenu = new System.Windows.Forms.DataGridView();
+            this.tsMenu = new System.Windows.Forms.ToolStrip();
+            this.tsbAddMenu = new System.Windows.Forms.ToolStripButton();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tsMenu = new System.Windows.Forms.ToolStrip();
-            this.tsbAddMenu = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgMenu)).BeginInit();
             this.tsMenu.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +47,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.Code,
             this.Description,
             this.Amount});
@@ -53,24 +55,7 @@
             this.dgMenu.Name = "dgMenu";
             this.dgMenu.Size = new System.Drawing.Size(1086, 680);
             this.dgMenu.TabIndex = 2;
-            // 
-            // Code
-            // 
-            this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Code";
-            this.Code.Name = "Code";
-            // 
-            // Description
-            // 
-            this.Description.DataPropertyName = "Description";
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            // 
-            // Amount
-            // 
-            this.Amount.DataPropertyName = "Amount";
-            this.Amount.HeaderText = "Amount";
-            this.Amount.Name = "Amount";
+            this.dgMenu.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgMenu_CellDoubleClick);
             // 
             // tsMenu
             // 
@@ -91,6 +76,31 @@
             this.tsbAddMenu.Size = new System.Drawing.Size(23, 22);
             this.tsbAddMenu.Text = "Add Menu";
             this.tsbAddMenu.Click += new System.EventHandler(this.tsbAddMenu_Click);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            // 
+            // Description
+            // 
+            this.Description.DataPropertyName = "Description";
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            // 
+            // Amount
+            // 
+            this.Amount.DataPropertyName = "Amount";
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
             // 
             // MenuMain
             // 
@@ -115,6 +125,7 @@
         private System.Windows.Forms.DataGridView dgMenu;
         private System.Windows.Forms.ToolStrip tsMenu;
         private System.Windows.Forms.ToolStripButton tsbAddMenu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;

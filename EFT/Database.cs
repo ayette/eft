@@ -13,8 +13,7 @@ namespace EFT
         }
 
         public virtual DbSet<Menu> Menus { get; set; }
-        public virtual DbSet<Student> Students { get; set; }
-        public virtual DbSet<Transaction> Transactions { get; set; }
+        public virtual DbSet<Student> Students { get; set; }        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -26,10 +25,7 @@ namespace EFT
                 .Property(e => e.FirstName)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Student>()
-                .HasMany(e => e.Transactions)
-                .WithRequired(e => e.Student)
-                .WillCascadeOnDelete(false);
+            
         }
     }
 }

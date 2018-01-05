@@ -13,7 +13,7 @@ namespace EFT
     public partial class FundsManagement : Form
     {
 
-        long studentId = 0;
+        
 
         public FundsManagement()
         {

@@ -36,5 +36,19 @@ namespace EFT
             addMenu.ShowDialog();
             RefreshGrid();
         }
+
+        private void dgMenu_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgMenu.CurrentRow.Index >= 0)
+            {
+                long id = Convert.ToInt64(dgMenu.Rows[dgMenu.CurrentRow.Index].Cells["Id"].Value);
+
+                EditMenu editMenu = new EditMenu();
+                editMenu.ItemId = id;
+                editMenu.ShowDialog();
+                RefreshGrid();
+                
+            }
+        }
     }
 }

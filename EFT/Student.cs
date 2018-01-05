@@ -9,10 +9,10 @@ namespace EFT
     [Table("Student")]
     public partial class Student
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        
         public Student()
         {
-            Transactions = new HashSet<Transaction>();
+            
         }
 
         public long Id { get; set; }
@@ -27,8 +27,6 @@ namespace EFT
         public string FirstName { get; set; }
 
         public decimal Amount { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Transaction> Transactions { get; set; }
+        
     }
 }

@@ -14,7 +14,7 @@ namespace EFT
     {
 
         List<OrderItem> items = new List<OrderItem>();
-        int count = 0;
+        
         public Canteen()
         {
             InitializeComponent();
