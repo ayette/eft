@@ -28,16 +28,16 @@ namespace EFT
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           //if (tabControl1.SelectedIndex == 1)
-           // {
-           //     // Focus cursor for barcode reader
-           //     txtStudentNumber.Focus();
-           // }
+            //if (tabControl1.SelectedIndex == 1)
+            // {
+            //     // Focus cursor for barcode reader
+            //     txtStudentNumber.Focus();
+            // }
         }
 
         private void txtStudentNumber_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtStudentNumber_KeyDown(object sender, KeyEventArgs e)
@@ -83,7 +83,7 @@ namespace EFT
         {
             using (var db = new Database())
             {
-                dataGridView1.DataSource = db.Students.ToList();
+                dgStudent.DataSource = db.Students.ToList();
             }
         }
 
@@ -99,6 +99,21 @@ namespace EFT
             AddFunds add = new AddFunds();
             add.ShowDialog();
             RefreshGrid();
+        }
+
+        private void dgStudent_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgStudent.CurrentRow.Index >= 0)
+            {
+                long id = Convert.ToInt64(dgStudent.Rows[dgStudent.CurrentRow.Index].Cells["Id"].Value);
+
+                EditStudent obj = new EditStudent();
+
+                obj.StudentId = id;
+                obj.ShowDialog();
+                RefreshGrid();
+
+            }
         }
     }
 }

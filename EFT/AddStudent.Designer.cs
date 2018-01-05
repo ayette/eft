@@ -54,6 +54,7 @@
             // txtStudentNumber
             // 
             this.txtStudentNumber.Location = new System.Drawing.Point(105, 23);
+            this.txtStudentNumber.MaxLength = 50;
             this.txtStudentNumber.Name = "txtStudentNumber";
             this.txtStudentNumber.Size = new System.Drawing.Size(200, 20);
             this.txtStudentNumber.TabIndex = 1;
@@ -61,6 +62,7 @@
             // txtFirstName
             // 
             this.txtFirstName.Location = new System.Drawing.Point(105, 55);
+            this.txtFirstName.MaxLength = 50;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(200, 20);
             this.txtFirstName.TabIndex = 3;
@@ -77,6 +79,7 @@
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(105, 91);
+            this.txtLastName.MaxLength = 50;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(200, 20);
             this.txtLastName.TabIndex = 5;

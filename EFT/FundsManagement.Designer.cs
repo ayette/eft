@@ -33,7 +33,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tbAdd = new System.Windows.Forms.ToolStripButton();
             this.tbAddFunds = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgStudent = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +43,7 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,30 +78,32 @@
             this.tbAddFunds.Text = "Add Funds";
             this.tbAddFunds.Click += new System.EventHandler(this.tbAddFunds_Click);
             // 
-            // dataGridView1
+            // dgStudent
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgStudent.AllowUserToAddRows = false;
+            this.dgStudent.AllowUserToDeleteRows = false;
+            this.dgStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Number,
             this.LastName,
             this.FirstName,
             this.Amount,
             this.Transactions});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(859, 496);
-            this.dataGridView1.TabIndex = 1;
+            this.dgStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgStudent.Location = new System.Drawing.Point(0, 25);
+            this.dgStudent.Name = "dgStudent";
+            this.dgStudent.ReadOnly = true;
+            this.dgStudent.Size = new System.Drawing.Size(859, 496);
+            this.dgStudent.TabIndex = 1;
+            this.dgStudent.DoubleClick += new System.EventHandler(this.dgStudent_DoubleClick);
             // 
             // Id
             // 
             this.Id.DataPropertyName = "Id";
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             this.Id.Visible = false;
             // 
             // Number
@@ -109,30 +111,35 @@
             this.Number.DataPropertyName = "Number";
             this.Number.HeaderText = "Number";
             this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
             // 
             // LastName
             // 
             this.LastName.DataPropertyName = "LastName";
             this.LastName.HeaderText = "Last Name";
             this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
             // 
             // FirstName
             // 
             this.FirstName.DataPropertyName = "FirstName";
             this.FirstName.HeaderText = "First name";
             this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
             // 
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
             this.Amount.HeaderText = "Funds";
             this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
             // 
             // Transactions
             // 
             this.Transactions.DataPropertyName = "Transactions";
             this.Transactions.HeaderText = "Transactions";
             this.Transactions.Name = "Transactions";
+            this.Transactions.ReadOnly = true;
             this.Transactions.Visible = false;
             // 
             // imageList1
@@ -151,7 +158,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 521);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgStudent);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FundsManagement";
@@ -159,7 +166,7 @@
             this.Load += new System.EventHandler(this.StudentDashboard_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgStudent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -169,7 +176,7 @@
         #endregion
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgStudent;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;

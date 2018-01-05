@@ -61,6 +61,7 @@
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(105, 91);
+            this.txtLastName.MaxLength = 50;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(200, 20);
             this.txtLastName.TabIndex = 15;
@@ -77,6 +78,7 @@
             // txtFirstName
             // 
             this.txtFirstName.Location = new System.Drawing.Point(105, 55);
+            this.txtFirstName.MaxLength = 50;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(200, 20);
             this.txtFirstName.TabIndex = 13;
@@ -93,6 +95,7 @@
             // txtStudentNumber
             // 
             this.txtStudentNumber.Location = new System.Drawing.Point(105, 23);
+            this.txtStudentNumber.MaxLength = 50;
             this.txtStudentNumber.Name = "txtStudentNumber";
             this.txtStudentNumber.Size = new System.Drawing.Size(200, 20);
             this.txtStudentNumber.TabIndex = 11;
@@ -130,6 +133,7 @@
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "Update";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // EditStudent
             // 
@@ -153,6 +157,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Edit Student";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.EditStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numFunds)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

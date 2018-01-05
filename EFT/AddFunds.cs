@@ -55,7 +55,7 @@ namespace EFT
                     if (s != null)
                     {
                         studentId = s.Id;
-                        txtName.Text = $"{s.FirstName} {s.LastName}";
+                        txtName.Text = $"{s.FirstName.Trim()} {s.LastName.Trim()}";
                     }
                 }
             }
