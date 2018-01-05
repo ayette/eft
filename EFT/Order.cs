@@ -92,5 +92,10 @@ namespace EFT
             dgOrder.DataSource = items.ToList();
             dgOrder.Update();
         }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

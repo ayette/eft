@@ -16,5 +16,18 @@ namespace EFT
         {
             InitializeComponent();
         }
+
+        private void RefreshGrid()
+        {
+            using (var db = new Database())
+            {
+                dgMenu.DataSource = db.Menus.ToList();
+            }
+        }
+
+        private void MenuMain_Load(object sender, EventArgs e)
+        {
+            RefreshGrid();
+        }
     }
 }
