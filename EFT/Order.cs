@@ -95,7 +95,33 @@ namespace EFT
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
+            Pay pay = new Pay();
+            pay.TotalAmount = Convert.ToDecimal(lblTotal.Text);
+            pay.ShowDialog();
 
+            txtCode.Text = string.Empty;
+            lblTotal.Text = "0.00";
+            numQuantity.Value = 1;
+            numPrice.Value = 0;
+            dgOrder.DataSource = null;
+            items.Clear();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (dgOrder.SelectedRows.Count > 0)
+            {
+                long id = Convert.ToInt64(dgOrder.Rows[dgOrder.CurrentRow.Index].Cells["Id"].Value);
+
+                var data = items.Where(x => x.Id == id).Single();
+
+                if (data != null)
+                {
+                    items.Remove(data);
+                    RefreshGrid();
+                    ComputeTotal();
+                }
+            }
         }
     }
 }
