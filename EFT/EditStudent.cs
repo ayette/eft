@@ -52,6 +52,10 @@ namespace EFT
             {
                 MessageBox.Show("Last name is required.", "Error", MessageBoxButtons.OK);
             }
+            else if (numFunds.Value > 10000)
+            {
+                MessageBox.Show("Invalid value.", "Error", MessageBoxButtons.OK);
+            }
             else
             {
                 // Save to database
