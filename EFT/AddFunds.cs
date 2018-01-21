@@ -26,6 +26,15 @@ namespace EFT
                 if (result != null)
                 {
                     result.Amount = result.Amount + numAmount.Value;
+
+
+                    if (result.Amount >= 1000000)
+                    {
+                        
+                        MessageBox.Show("Maximum value.", "Error", MessageBoxButtons.OK);
+                        return;
+                    }
+
                     db.SaveChanges();
 
                     MessageBox.Show("Successfuly funds updated.");

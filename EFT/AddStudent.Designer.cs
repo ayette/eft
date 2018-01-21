@@ -106,6 +106,11 @@
             // 
             this.numFunds.DecimalPlaces = 2;
             this.numFunds.Location = new System.Drawing.Point(105, 125);
+            this.numFunds.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.numFunds.Name = "numFunds";
             this.numFunds.Size = new System.Drawing.Size(120, 20);
             this.numFunds.TabIndex = 7;
