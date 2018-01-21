@@ -20,10 +20,10 @@ namespace EFT
         [StringLength(50)]
         public string Number { get; set; }
 
-        [StringLength(10)]
+        [StringLength(50)]
         public string LastName { get; set; }
 
-        [StringLength(10)]
+        [StringLength(50)]
         public string FirstName { get; set; }
 
         public decimal Amount { get; set; }
