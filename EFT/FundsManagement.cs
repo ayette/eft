@@ -115,5 +115,19 @@ namespace EFT
 
             }
         }
+
+        private void tsbViewTransactions_Click(object sender, EventArgs e)
+        {
+            if (dgStudent.CurrentRow.Index >= 0)
+            {
+                long id = Convert.ToInt64(dgStudent.Rows[dgStudent.CurrentRow.Index].Cells["Id"].Value);
+
+                TranHistory obj = new TranHistory();
+
+                obj.StudentId = id;
+                obj.ShowDialog();
+                
+            }
+        }
     }
 }

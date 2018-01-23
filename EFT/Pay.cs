@@ -15,6 +15,9 @@ namespace EFT
 
         long studentId = 0;
         public decimal TotalAmount { get; set; }
+
+        public List<OrderItem> Items = new List<OrderItem>();
+
         public Pay()
         {
             InitializeComponent();
@@ -62,7 +65,32 @@ namespace EFT
                     {
                         result.Amount = result.Amount - amount;
                         db.SaveChanges();
+
+                        // add to transaction history
+                        List<TranDetail> tranDetails = new List<TranDetail>();
+
+                        foreach (OrderItem item in Items)
+                        {
+                            TranDetail trand = new TranDetail();
+
+                            trand.Code = item.Code;
+                            trand.Description = item.Description;
+                            trand.Price = item.Price;
+
+                            tranDetails.Add(trand);
+                        }
+
+                        Transaction tran = new Transaction();
+                        tran.StudentId = studentId;
+                        tran.Date = DateTime.Now;
+                        tran.Amount = amount;
+                        tran.TranDetails = tranDetails;
+
+                        db.Transactions.Add(tran);
+                        db.SaveChanges();
+
                     }
+
                 }
             }
 

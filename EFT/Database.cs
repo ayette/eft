@@ -13,7 +13,9 @@ namespace EFT
         }
 
         public virtual DbSet<Menu> Menus { get; set; }
-        public virtual DbSet<Student> Students { get; set; }        
+        public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<Transaction> Transactions { get; set; }  
+        public virtual DbSet<TranDetail> TranDetails { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

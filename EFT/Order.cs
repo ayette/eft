@@ -97,6 +97,7 @@ namespace EFT
         {
             Pay pay = new Pay();
             pay.TotalAmount = Convert.ToDecimal(lblTotal.Text);
+            pay.Items = items;
             pay.ShowDialog();
 
             txtCode.Text = string.Empty;

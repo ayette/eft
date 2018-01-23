@@ -32,7 +32,7 @@ namespace EFT
         }
 
         private void btnPOS_Click(object sender, EventArgs e)
-        {
+        {            
             Order order = new Order();
             order.MdiParent = this.MdiParent;
             order.Show();

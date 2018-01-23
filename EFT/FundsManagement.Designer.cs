@@ -42,6 +42,7 @@
             this.Transactions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tsbViewTransactions = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -51,7 +52,8 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tbAdd,
-            this.tbAddFunds});
+            this.tbAddFunds,
+            this.tsbViewTransactions});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(859, 25);
@@ -153,6 +155,16 @@
             // 
             this.bindingSource1.AllowNew = false;
             // 
+            // tsbViewTransactions
+            // 
+            this.tsbViewTransactions.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbViewTransactions.Image = ((System.Drawing.Image)(resources.GetObject("tsbViewTransactions.Image")));
+            this.tsbViewTransactions.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbViewTransactions.Name = "tsbViewTransactions";
+            this.tsbViewTransactions.Size = new System.Drawing.Size(105, 22);
+            this.tsbViewTransactions.Text = "View Transactions";
+            this.tsbViewTransactions.Click += new System.EventHandler(this.tsbViewTransactions_Click);
+            // 
             // FundsManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,5 +198,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tbAdd;
         private System.Windows.Forms.ToolStripButton tbAddFunds;
+        private System.Windows.Forms.ToolStripButton tsbViewTransactions;
     }
 }
