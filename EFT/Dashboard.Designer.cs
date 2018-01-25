@@ -38,9 +38,10 @@
             // 
             this.btnPOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPOS.Image = global::EFT.Properties.Resources.cashier_machine;
-            this.btnPOS.Location = new System.Drawing.Point(580, 154);
+            this.btnPOS.Location = new System.Drawing.Point(870, 237);
+            this.btnPOS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPOS.Name = "btnPOS";
-            this.btnPOS.Size = new System.Drawing.Size(145, 105);
+            this.btnPOS.Size = new System.Drawing.Size(218, 162);
             this.btnPOS.TabIndex = 5;
             this.btnPOS.Text = "Order";
             this.btnPOS.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -51,9 +52,10 @@
             // 
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMenu.Image = global::EFT.Properties.Resources.menu;
-            this.btnMenu.Location = new System.Drawing.Point(357, 154);
+            this.btnMenu.Location = new System.Drawing.Point(546, 237);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(145, 105);
+            this.btnMenu.Size = new System.Drawing.Size(218, 162);
             this.btnMenu.TabIndex = 4;
             this.btnMenu.Text = "Menu";
             this.btnMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -65,9 +67,10 @@
             this.btnFunds.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnFunds.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFunds.Image = global::EFT.Properties.Resources.money_bag1;
-            this.btnFunds.Location = new System.Drawing.Point(137, 154);
+            this.btnFunds.Location = new System.Drawing.Point(206, 237);
+            this.btnFunds.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFunds.Name = "btnFunds";
-            this.btnFunds.Size = new System.Drawing.Size(145, 105);
+            this.btnFunds.Size = new System.Drawing.Size(218, 162);
             this.btnFunds.TabIndex = 3;
             this.btnFunds.Text = "Funds";
             this.btnFunds.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -76,15 +79,16 @@
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(983, 569);
+            this.ClientSize = new System.Drawing.Size(1293, 617);
             this.Controls.Add(this.btnPOS);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.btnFunds);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dashboard";
