@@ -55,7 +55,7 @@ namespace EFT
                     amount = Convert.ToDecimal(lblAmount.Text);
                     ded = result.Amount - amount;
 
-                    if (ded <0)
+                    if (ded <= 0)
                     {
                         MessageBox.Show("Insufficient fund.");
                         return;
@@ -72,8 +72,9 @@ namespace EFT
                         foreach (OrderItem item in Items)
                         {
                             TranDetail trand = new TranDetail();
-
+                            
                             trand.Code = item.Code;
+                            trand.Quantity = item.Quantity;
                             trand.Description = item.Description;
                             trand.Price = item.Price;
 
