@@ -55,7 +55,7 @@ namespace EFT
                     amount = Convert.ToDecimal(lblAmount.Text);
                     ded = result.Amount - amount;
 
-                    if (ded <= 0)
+                    if (ded < 0)
                     {
                         MessageBox.Show("Insufficient fund.");
                         return;
